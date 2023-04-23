@@ -38,7 +38,11 @@ spec:
   {{- end }}
   rules:
     {{- range .Values.ingress.hosts }}
+    {{- if eq $.Release.Namespace "prod" }}
+    - host: {{ $fullName }}.{{ .host }}
+    {{- else }}
     - host: {{ $fullName }}.{{ $.Release.Namespace }}.{{ .host }}
+    {{- end }}
       http:
         paths:
           {{- range .paths }}
