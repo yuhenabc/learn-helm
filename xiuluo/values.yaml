@@ -80,3 +80,17 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env:
+  prod:
+  - name: ENV
+    value: prod
+  uat:
+  - name: ENV
+    value: uat
+  test:
+  - name: ENV
+    value: test
+  dev:
+  - name: ENV
+    value: dev

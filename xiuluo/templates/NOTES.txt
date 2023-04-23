@@ -3,7 +3,11 @@
 {{- if .Values.ingress.enabled }}
 {{- range $host := .Values.ingress.hosts }}
   {{- range .paths }}
+  {{- if eq $.Release.Namespace "prod" }}
+  http{{ if $.Values.ingress.tls }}s{{ end }}://{{ $fullName }}.{{ $host.host }}{{ .path }}
+  {{- else }}
   http{{ if $.Values.ingress.tls }}s{{ end }}://{{ $fullName }}.{{ $.Release.Namespace }}.{{ $host.host }}{{ .path }}
+  {{- end }}
   {{- end }}
 {{- end }}
 {{- else if contains "NodePort" .Values.service.type }}
