@@ -47,6 +47,10 @@ spec:
             {{- else }}
             {{- if eq .Release.Namespace "test" }}
             {{- toYaml .Values.env.test | nindent 12 }}
+            {{- else }}
+            {{- if eq .Release.Namespace "dev" }}
+            {{- toYaml .Values.env.dev | nindent 12 }}
+            {{- end }}
             {{- end }}
             {{- end }}
             {{- end }}

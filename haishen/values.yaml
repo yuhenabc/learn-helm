@@ -91,4 +91,7 @@ env:
   test:
   - name: ENV
     value: test
+  dev:
+  - name: ENV
+    value: dev
 
