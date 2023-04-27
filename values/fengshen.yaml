@@ -1,0 +1,4 @@
+nameOverride: fengshen
+image:
+  repository: yuhenabc/fengshen
+  tag: latest

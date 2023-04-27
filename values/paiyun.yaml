@@ -1,0 +1,4 @@
+nameOverride: paiyun
+image:
+  repository: yuhenabc/paiyun
+  tag: latest
