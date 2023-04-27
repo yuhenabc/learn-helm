@@ -1,0 +1,4 @@
+nameOverride: haishen
+image:
+  repository: yuhenabc/haishen
+  tag: latest

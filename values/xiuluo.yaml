@@ -1,0 +1,4 @@
+nameOverride: xiuluo
+image:
+  repository: yuhenabc/xiuluo
+  tag: latest
