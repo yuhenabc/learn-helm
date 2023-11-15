@@ -1,4 +1,0 @@
-nameOverride: tianshuang
-image:
-  repository: yuhenabc/tianshuang
-  tag: latest
